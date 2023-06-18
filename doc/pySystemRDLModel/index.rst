@@ -5,4 +5,4 @@ Reference of all packages and modules:
 
 .. toctree::
 
-   pySVModel
+   pySystemRDLModel
