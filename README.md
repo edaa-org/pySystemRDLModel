@@ -31,7 +31,7 @@ This package provides a unified abstract language model for SystemRDL.
 Projects reading from source files can derive own classes and implement additional logic to create a concrete language
 model for their tools.
 
-Projects consuming pre-processed System Verilog data (parsed, analyzed or elaborated) can build higher level features
+Projects consuming pre-processed SystemRDL data (parsed, analyzed or elaborated) can build higher level features
 and services on such a model, while supporting multiple frontends.
 
 

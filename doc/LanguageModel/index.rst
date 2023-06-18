@@ -1,11 +1,11 @@
-.. _svmodel:
+.. _SRDLModel:
 
-SystemVerilog Language Model
-############################
+SystemRDL Language Model
+########################
 
 .. topic:: Design Goal
 
-   * Clearly named classes that model the semantics of System Verilog.
+   * Clearly named classes that model the semantics of SystemRDL.
    * All language constructs (statements, declarations, specifications, …) have their own classes.
      |br|
      These classes are arranged in a logical hierarchy, with a single common base-class.

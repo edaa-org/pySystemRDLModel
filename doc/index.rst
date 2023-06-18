@@ -32,7 +32,7 @@
 The pySystemRDLModel Documentation
 ##################################
 
-An abstract System Verilog language model.
+An abstract SystemRDL language model.
 
 
 .. _goals:
@@ -40,11 +40,11 @@ An abstract System Verilog language model.
 Main Goals
 **********
 
-This package provides a unified abstract language model for System Verilog (incl. Verilog).
+This package provides a unified abstract language model for SystemRDL.
 Projects reading from source files can derive own classes and implement additional logic to create a concrete language
 model for their tools.
 
-Projects consuming pre-processed System Verilog data (parsed, analyzed or elaborated) can build higher level features
+Projects consuming pre-processed SystemRDL data (parsed, analyzed or elaborated) can build higher level features
 and services on such a model, while supporting multiple frontends.
 
 
@@ -63,14 +63,14 @@ News
 
 .. only:: html
 
-   Sep. 2021 - New Repository Created
+   June 2023 - New Repository Created
    ==================================
 
 .. only:: latex
 
    .. rubric:: New Repository Created
 
-* Moved ``VerilogVersion`` and ``SystemVerilogVersion`` classes from ``pyEDAA.ProjectModel`` to this new repository.
+* Moved ``SystemRDLVersion`` class from ``pyEDAA.ProjectModel`` to this new repository.
 
 
 .. _contributors:
@@ -79,7 +79,6 @@ Contributors
 ************
 
 * `Patrick Lehmann <https://GitHub.com/Paebbels>`__ (Maintainer)
-* `Unai Martinez-Corral <https://GitHub.com/umarcor/>`__
 * `and more... <https://GitHub.com/edaa-org/pySystemRDLModel/graphs/contributors>`__
 
 
