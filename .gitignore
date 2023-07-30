@@ -1,0 +1,25 @@
+# Python cache and object files
+__pycache__/
+*.py[cod]
+
+# Coverage.py
+.coverage
+.cov
+coverage.xml
+
+# setuptools
+/build/
+/dist/
+/*.egg-info
+
+# Dependencies
+!requirements.txt
+
+# Sphinx
+/doc/_build/
+/doc/_theme/
+/doc/pySystemRDLModel/**/*.*
+!/doc/pySystemRDLModel/index.rst
+
+# PyCharm project files
+/.idea/workspace.xml
