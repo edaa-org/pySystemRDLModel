@@ -50,44 +50,47 @@ __version__ =   "0.2.0"
 @export
 @unique
 class SystemRDLVersion(Enum):
-	Any =                 -1
-	SystemVerilog2005 = 2005
-	SystemVerilog2009 = 2009
-	SystemVerilog2012 = 2012
-	SystemVerilog2017 = 2017
+	Any =             -1
+	SystemRDL2005 = 2005
+	SystemRDL2009 = 2009
+	SystemRDL2012 = 2012
+	SystemRDL2017 = 2017
 
 	__VERSION_MAPPINGS__: Dict[Union[int, str], Enum] = {
-		5:      SystemVerilog2005,
-		9:      SystemVerilog2009,
-		12:     SystemVerilog2012,
-		17:     SystemVerilog2017,
-		2005:   SystemVerilog2005,
-		2009:   SystemVerilog2009,
-		2012:   SystemVerilog2012,
-		2017:   SystemVerilog2017,
+		-1:     Any,
+		5:      SystemRDL2005,
+		9:      SystemRDL2009,
+		12:     SystemRDL2012,
+		17:     SystemRDL2017,
+		2005:   SystemRDL2005,
+		2009:   SystemRDL2009,
+		2012:   SystemRDL2012,
+		2017:   SystemRDL2017,
 		"Any":  Any,
-		"05":   SystemVerilog2005,
-		"09":   SystemVerilog2009,
-		"12":   SystemVerilog2012,
-		"17":   SystemVerilog2017,
-		"2005": SystemVerilog2005,
-		"2009": SystemVerilog2009,
-		"2012": SystemVerilog2012,
-		"2017": SystemVerilog2017,
+		"05":   SystemRDL2005,
+		"09":   SystemRDL2009,
+		"12":   SystemRDL2012,
+		"17":   SystemRDL2017,
+		"2005": SystemRDL2005,
+		"2009": SystemRDL2009,
+		"2012": SystemRDL2012,
+		"2017": SystemRDL2017,
 	}
 
 	def __init__(self, *_):
 		"""Patch the embedded MAP dictionary"""
-		for k, v in self.__class__.__VERSION_MAPPINGS__.items():
-			if (not isinstance(v, self.__class__)) and (v == self.value):
-				self.__class__.__VERSION_MAPPINGS__[k] = self
+		cls = self.__class__
+		for k, v in cls.__VERSION_MAPPINGS__.items():
+			if (not isinstance(v, cls)) and (v == self.value):
+				print(f"patching {k}:{v} with {self}")
+				cls.__VERSION_MAPPINGS__[k] = self
 
 	@classmethod
-	def Parse(cls, value):
+	def Parse(cls, value: Union[int, str]) -> "SystemRDLVersion":
 		try:
 			return cls.__VERSION_MAPPINGS__[value]
 		except KeyError:
-			ValueError(f"Value '{value!s}' cannot be parsed to member of {cls.__name__}.")
+			raise ValueError(f"Value '{value!s}' cannot be parsed to member of {cls.__name__}.")
 
 	def __lt__(self, other):
 		return self.value < other.value
@@ -110,8 +113,14 @@ class SystemRDLVersion(Enum):
 		else:
 			return self.value == other.value
 
-	def __str__(self):
-		return "SV'" + str(self.value)[-2:]
+	def __str__(self) -> str:
+		if self.value == -1:
+			return "SystemRDL'Any"
+		else:
+			return f"SystemRDL'{str(self.value)[-2:]}"
 
-	def __repr__(self):
-		return str(self.value)
+	def __repr__(self) -> str:
+		if self.value == -1:
+			return "Any"
+		else:
+			return str(self.value)
