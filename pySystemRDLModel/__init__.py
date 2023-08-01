@@ -91,22 +91,22 @@ class SystemRDLVersion(Enum):
 		except KeyError:
 			raise ValueError(f"Value '{value!s}' cannot be parsed to member of {cls.__name__}.")
 
-	def __lt__(self, other):
+	def __lt__(self, other) -> bool:
 		return self.value < other.value
 
-	def __le__(self, other):
+	def __le__(self, other) -> bool:
 		return self.value <= other.value
 
-	def __gt__(self, other):
+	def __gt__(self, other) -> bool:
 		return self.value > other.value
 
-	def __ge__(self, other):
+	def __ge__(self, other) -> bool:
 		return self.value >= other.value
 
-	def __ne__(self, other):
+	def __ne__(self, other) -> bool:
 		return self.value != other.value
 
-	def __eq__(self, other):
+	def __eq__(self, other) -> bool:
 		if (self is self.__class__.Any) or (other is self.__class__.Any):
 			return True
 		else:
