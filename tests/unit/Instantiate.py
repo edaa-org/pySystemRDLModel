@@ -40,8 +40,90 @@ if __name__ == "__main__": # pragma: no cover
 	exit(1)
 
 
-class Instantiate(TestCase):
-	def test_SystemRDLVersion(self):
-		version = SystemRDLVersion.Parse("2017")
+class SysRDLVersion(TestCase):
+	def test_Any(self):
+		versions = (
+			SystemRDLVersion.Parse(-1),
+			SystemRDLVersion.Parse("Any"),
+		)
 
-		self.assertIsNotNone(version)
+		for version in versions:
+			self.assertIs(SystemRDLVersion.Any, version)
+
+		print()
+		print(version)
+		print(version.value)
+
+	def test_2005(self):
+		versions = (
+			SystemRDLVersion.Parse(5),
+			SystemRDLVersion.Parse(2005),
+			SystemRDLVersion.Parse("05"),
+			SystemRDLVersion.Parse("2005"),
+		)
+
+		for version in versions:
+			self.assertIs(SystemRDLVersion.SystemRDL2005, version)
+
+		print()
+		print(version)
+		print(version.value)
+
+	def test_2009(self):
+		versions = (
+			SystemRDLVersion.Parse(9),
+			SystemRDLVersion.Parse(2009),
+			SystemRDLVersion.Parse("09"),
+			SystemRDLVersion.Parse("2009"),
+		)
+
+		for version in versions:
+			self.assertIs(SystemRDLVersion.SystemRDL2009, version)
+
+		print()
+		print(version)
+		print(version.value)
+
+	def test_2012(self):
+		versions = (
+			SystemRDLVersion.Parse(12),
+			SystemRDLVersion.Parse(2012),
+			SystemRDLVersion.Parse("12"),
+			SystemRDLVersion.Parse("2012"),
+		)
+
+		for version in versions:
+			self.assertIs(SystemRDLVersion.SystemRDL2012, version)
+
+		print()
+		print(version)
+		print(version.value)
+
+	def test_2019(self):
+		versions = (
+			SystemRDLVersion.Parse(17),
+			SystemRDLVersion.Parse(2017),
+			SystemRDLVersion.Parse("17"),
+			SystemRDLVersion.Parse("2017"),
+		)
+
+		for version in versions:
+			self.assertIs(SystemRDLVersion.SystemRDL2017, version)
+
+		print()
+		print(version)
+		print(version.value)
+
+	def test_IntError(self):
+		with self.assertRaises(ValueError):
+			_ = SystemRDLVersion.Parse(0)
+
+		with self.assertRaises(ValueError):
+			_ = SystemRDLVersion.Parse(13)
+
+	def test_StrError(self):
+		with self.assertRaises(ValueError):
+			_ = SystemRDLVersion.Parse("0")
+
+		with self.assertRaises(ValueError):
+			_ = SystemRDLVersion.Parse("13")
