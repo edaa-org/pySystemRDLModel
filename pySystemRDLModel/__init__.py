@@ -44,7 +44,7 @@ __author__ =    "Patrick Lehmann"
 __email__ =     "Paebbels@gmail.com"
 __copyright__ = "2023-2023, Patrick Lehmann"
 __license__ =   "Apache License, Version 2.0"
-__version__ =   "0.2.0"
+__version__ =   "0.2.1"
 
 
 @export
@@ -82,7 +82,6 @@ class SystemRDLVersion(Enum):
 		cls = self.__class__
 		for k, v in cls.__VERSION_MAPPINGS__.items():
 			if (not isinstance(v, cls)) and (v == self.value):
-				print(f"patching {k}:{v} with {self}")
 				cls.__VERSION_MAPPINGS__[k] = self
 
 	@classmethod
