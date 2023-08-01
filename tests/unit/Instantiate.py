@@ -99,7 +99,7 @@ class SysRDLVersion(TestCase):
 		print(version)
 		print(version.value)
 
-	def test_2019(self):
+	def test_2017(self):
 		versions = (
 			SystemRDLVersion.Parse(17),
 			SystemRDLVersion.Parse(2017),
