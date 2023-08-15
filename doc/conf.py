@@ -206,7 +206,7 @@ autodoc_typehints = "both"
 extlinks = {
 	"ghissue": ('https://GitHub.com/edaa-org/pySystemRDLModel/issues/%s', 'issue #'),
 	"ghpull":  ('https://GitHub.com/edaa-org/pySystemRDLModel/pull/%s', 'pull request #'),
-	"ghsrc":   ('https://GitHub.com/edaa-org/pySystemRDLModel/blob/main/%s?ts=2', ""),
+	"ghsrc":   ('https://GitHub.com/edaa-org/pySystemRDLModel/blob/main/%s?ts=2', None),
 }
 
 
