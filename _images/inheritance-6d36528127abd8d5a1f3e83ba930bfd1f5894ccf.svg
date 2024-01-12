@@ -1,0 +1,29 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="1pt" height="864pt" viewBox="0.00 0.00 0.69 864.00">
+<ns0:g id="graph0" class="graph" transform="scale(0.00293694 0.00293694) rotate(0) translate(4 294179.59)">
+<ns0:title>inheritance94544f03fc</ns0:title>
+
+<ns0:g id="node1" class="node">
+<ns0:title>Enum</ns0:title>
+<ns0:g id="a_node1"><ns0:a ns1:href="https://docs.python.org/3/library/enum.html#enum.Enum" ns1:title="Create a collection of name/value pairs." target="_top">
+<ns0:polygon fill="white" stroke="black" stroke-width="0.5" points="54,-147097.04 0,-147097.04 0,-147078.54 54,-147078.54 54,-147097.04" />
+<ns0:text text-anchor="middle" x="27" y="-147083.54" font-family="Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans" font-size="10.00">Enum</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="node2" class="node">
+<ns0:title>SystemRDLVersion</ns0:title>
+<ns0:g id="a_node2"><ns0:a ns1:href="../pySystemRDLModel/pySystemRDLModel.html#pySystemRDLModel.SystemRDLVersion" ns1:title="SystemRDLVersion" target="_top">
+<ns0:polygon fill="white" stroke="black" stroke-width="0.5" points="226,-294175.59 90,-294175.59 90,0 226,0 226,-294175.59" />
+<ns0:text text-anchor="middle" x="158" y="-294162.09" font-family="Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans" font-size="10.00">SystemRDLVersion</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge1" class="edge">
+<ns0:title>Enum-&gt;SystemRDLVersion</ns0:title>
+<ns0:path fill="none" stroke="black" stroke-width="0.5" d="M54.42,-147087.79C63.12,-147087.79 73.27,-147087.79 83.74,-147087.79" />
+<ns0:polygon fill="black" stroke="black" stroke-width="0.5" points="84.57,-147089.55 89.57,-147087.79 84.57,-147086.05 84.57,-147089.55" />
+</ns0:g>
+</ns0:g>
+</ns0:svg>
