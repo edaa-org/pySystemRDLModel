@@ -73,7 +73,7 @@ News
 * Moved ``SystemRDLVersion`` class from ``pyEDAA.ProjectModel`` to this new repository.
 
 
-.. _contributors:
+.. _CONTRIBUTORS:
 
 Contributors
 ************
@@ -81,6 +81,8 @@ Contributors
 * `Patrick Lehmann <https://GitHub.com/Paebbels>`__ (Maintainer)
 * `and more... <https://GitHub.com/edaa-org/pySystemRDLModel/graphs/contributors>`__
 
+
+.. _LICENSE:
 
 License
 *******
