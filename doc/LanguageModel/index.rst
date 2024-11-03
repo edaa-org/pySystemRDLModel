@@ -3,7 +3,7 @@
 SystemRDL Language Model
 ########################
 
-.. topic:: Design Goal
+.. topic:: Design Goals
 
    * Clearly named classes that model the semantics of SystemRDL.
    * All language constructs (statements, declarations, specifications, …) have their own classes.

@@ -11,7 +11,7 @@
 #                                                                                                                      #
 # License:                                                                                                             #
 # ==================================================================================================================== #
-# Copyright 2023-2023 Patrick Lehmann - Boetzingen, Germany                                                            #
+# Copyright 2023-2024 Patrick Lehmann - Boetzingen, Germany                                                            #
 #                                                                                                                      #
 # Licensed under the Apache License, Version 2.0 (the "License");                                                      #
 # you may not use this file except in compliance with the License.                                                     #
@@ -41,7 +41,7 @@ if __name__ == "__main__": # pragma: no cover
 
 
 class SysRDLVersion(TestCase):
-	def test_Any(self):
+	def test_Any(self) -> None:
 		versions = (
 			SystemRDLVersion.Parse(-1),
 			SystemRDLVersion.Parse("Any"),
@@ -54,7 +54,7 @@ class SysRDLVersion(TestCase):
 		print(version)
 		print(version.value)
 
-	def test_2005(self):
+	def test_2005(self) -> None:
 		versions = (
 			SystemRDLVersion.Parse(5),
 			SystemRDLVersion.Parse(2005),
@@ -69,7 +69,7 @@ class SysRDLVersion(TestCase):
 		print(version)
 		print(version.value)
 
-	def test_2009(self):
+	def test_2009(self) -> None:
 		versions = (
 			SystemRDLVersion.Parse(9),
 			SystemRDLVersion.Parse(2009),
@@ -84,7 +84,7 @@ class SysRDLVersion(TestCase):
 		print(version)
 		print(version.value)
 
-	def test_2012(self):
+	def test_2012(self) -> None:
 		versions = (
 			SystemRDLVersion.Parse(12),
 			SystemRDLVersion.Parse(2012),
@@ -99,7 +99,7 @@ class SysRDLVersion(TestCase):
 		print(version)
 		print(version.value)
 
-	def test_2017(self):
+	def test_2017(self) -> None:
 		versions = (
 			SystemRDLVersion.Parse(17),
 			SystemRDLVersion.Parse(2017),
@@ -114,14 +114,14 @@ class SysRDLVersion(TestCase):
 		print(version)
 		print(version.value)
 
-	def test_IntError(self):
+	def test_IntError(self) -> None:
 		with self.assertRaises(ValueError):
 			_ = SystemRDLVersion.Parse(0)
 
 		with self.assertRaises(ValueError):
 			_ = SystemRDLVersion.Parse(13)
 
-	def test_StrError(self):
+	def test_StrError(self) -> None:
 		with self.assertRaises(ValueError):
 			_ = SystemRDLVersion.Parse("0")
 
