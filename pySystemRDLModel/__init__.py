@@ -29,10 +29,18 @@
 # ==================================================================================================================== #
 #
 """
-An abstract SystemRDL language model.
+**An abstract SystemRDL language model.**
 
-:copyright: Copyright 2023-2024 Patrick Lehmann - Bötzingen, Germany
-:license: Apache License, Version 2.0
+This package provides a unified abstract language model for SystemRDL. Projects reading from source files can derive own
+classes and implement additional logic to create a concrete language model for their tools.
+
+Projects consuming pre-processed SystemRDL data can build higher level features and services on such a model, while
+supporting multiple frontends.
+
+.. admonition:: Copyright Information
+
+   :copyright: Copyright 2023-2024 Patrick Lehmann - Bötzingen, Germany
+   :license: Apache License, Version 2.0
 """
 from enum   import unique, Enum
 from typing import Dict, Union
@@ -50,12 +58,20 @@ __version__ =   "0.3.1"
 @export
 @unique
 class SystemRDLVersion(Enum):
-	Any =              -1
+	"""
+	An enumeration for all possible version numbers for SystemRDL.
 
-	SystemRDL2005 =  2005
-	SystemRDL2009 =  2009
-	SystemRDL2012 =  2012
-	SystemRDL2017 =  2017
+	A version can be given as integer or string and is represented as a unified
+	enumeration value.
+
+	This enumeration supports compare operators.
+	"""
+	Any =              -1  #: Any
+
+	SystemRDL2005 =  2005  #: SystemRDL-2005
+	SystemRDL2009 =  2009  #: SystemRDL-2009
+	SystemRDL2012 =  2012  #: SystemRDL-2012
+	SystemRDL2017 =  2017  #: SystemRDL-2017
 
 	Latest =        10000
 
@@ -80,7 +96,7 @@ class SystemRDLVersion(Enum):
 		"2012":   SystemRDL2012,
 		"2017":   SystemRDL2017,
 		"Latest": SystemRDL2017,
-	}
+	}  #: Dictionary of SystemRDL year codes variants as integer and strings for mapping to unique enum values.
 
 	def __init__(self, *_):
 		"""Patch the embedded MAP dictionary"""
@@ -91,6 +107,13 @@ class SystemRDLVersion(Enum):
 
 	@classmethod
 	def Parse(cls, value: Union[int, str]) -> "SystemRDLVersion":
+		"""
+		Parses a SystemRDL year code as integer or string to an enum value.
+
+		:param value:       VHDL/VHDL-AMS year code.
+		:returns:           Enumeration value.
+		:raises ValueError: If the year code is not recognized.
+		"""
 		try:
 			return cls.__VERSION_MAPPINGS__[value]
 		except KeyError:
@@ -98,7 +121,7 @@ class SystemRDLVersion(Enum):
 
 	def __lt__(self, other: Any) -> bool:
 		"""
-		Compare two (System)Verilog versions if the version is less than the second operand.
+		Compare two SystemRDL versions if the version is less than the second operand.
 
 		:param other:      Parameter to compare against.
 		:returns:          True if version is less than the second operand.
@@ -111,7 +134,7 @@ class SystemRDLVersion(Enum):
 
 	def __le__(self, other: Any) -> bool:
 		"""
-		Compare two (System)Verilog versions if the version is less or equal than the second operand.
+		Compare two SystemRDL versions if the version is less or equal than the second operand.
 
 		:param other:      Parameter to compare against.
 		:returns:          True if version is less or equal than the second operand.
@@ -124,7 +147,7 @@ class SystemRDLVersion(Enum):
 
 	def __gt__(self, other: Any) -> bool:
 		"""
-		Compare two (System)Verilog versions if the version is greater than the second operand.
+		Compare two SystemRDL versions if the version is greater than the second operand.
 
 		:param other:      Parameter to compare against.
 		:returns:          True if version is greater than the second operand.
@@ -137,7 +160,7 @@ class SystemRDLVersion(Enum):
 
 	def __ge__(self, other: Any) -> bool:
 		"""
-		Compare two (System)Verilog versions if the version is greater or equal than the second operand.
+		Compare two SystemRDL versions if the version is greater or equal than the second operand.
 
 		:param other:      Parameter to compare against.
 		:returns:          True if version is greater or equal than the second operand.
@@ -150,7 +173,7 @@ class SystemRDLVersion(Enum):
 
 	def __ne__(self, other: Any) -> bool:
 		"""
-		Compare two (System)Verilog versions if the version is unequal to the second operand.
+		Compare two SystemRDL versions if the version is unequal to the second operand.
 
 		:param other:      Parameter to compare against.
 		:returns:          True if version is unequal to the second operand.
@@ -163,7 +186,7 @@ class SystemRDLVersion(Enum):
 
 	def __eq__(self, other: Any) -> bool:
 		"""
-		Compare two (System)Verilog versions if the version is equal to the second operand.
+		Compare two SystemRDL versions if the version is equal to the second operand.
 
 		:param other:      Parameter to compare against.
 		:returns:          True if version is equal to the second operand.

@@ -97,13 +97,6 @@ License
    This Python package (source code) is licensed under **Apache License 2.0**. |br|
    The accompanying documentation is licensed under **Creative Commons - Attribution 4.0 (CC-BY 4.0)**.
 
-------------------------------------
-
-.. |docdate| date:: %d.%b %Y - %H:%M
-
-.. only:: html
-
-   This document was generated on |docdate|.
 
 .. toctree::
    :hidden:
@@ -116,7 +109,6 @@ License
 
    Installation
    Dependency
-
 
 .. raw:: latex
 
@@ -131,14 +123,17 @@ License
 
 .. raw:: latex
 
-   \part{References}
+   \part{References and Reports}
 
 .. toctree::
-   :caption: References
+   :caption: References and Reports
    :hidden:
 
-   pySystemRDLModel/index
-
+   pySystemRDLModel/pySystemRDLModel
+   unittests/index
+   coverage/index
+   Doc. Coverage Report <DocCoverage>
+   Static Type Check Report ➚ <typing/index>
 
 .. raw:: latex
 
@@ -148,12 +143,9 @@ License
    :caption: Appendix
    :hidden:
 
-   Coverage Report ➚ <coverage/index>
-   Static Type Check Report ➚ <typing/index>
    License
    Doc-License
    Glossary
    genindex
-
-.. #
-   py-modindex
+   Python Module Index <modindex>
+   TODO
