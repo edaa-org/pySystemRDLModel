@@ -30,6 +30,7 @@ filterwarnings = [
 	"error::DeprecationWarning",
 	"error::PendingDeprecationWarning"
 ]
+junit_logging = "all"
 
 [tool.interrogate]
 color = true
