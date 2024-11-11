@@ -52,7 +52,7 @@ __author__ =    "Patrick Lehmann"
 __email__ =     "Paebbels@gmail.com"
 __copyright__ = "2023-2024, Patrick Lehmann"
 __license__ =   "Apache License, Version 2.0"
-__version__ =   "0.3.1"
+__version__ =   "0.3.2"
 
 
 @export
@@ -73,7 +73,7 @@ class SystemRDLVersion(Enum):
 	SystemRDL2012 =  2012  #: SystemRDL-2012
 	SystemRDL2017 =  2017  #: SystemRDL-2017
 
-	Latest =        10000
+	Latest =        10000  #: Latest SystemRDL (2017)
 
 	__VERSION_MAPPINGS__: Dict[Union[int, str], Enum] = {
 		-1:       Any,
@@ -110,7 +110,7 @@ class SystemRDLVersion(Enum):
 		"""
 		Parses a SystemRDL year code as integer or string to an enum value.
 
-		:param value:       VHDL/VHDL-AMS year code.
+		:param value:       SystemRDL year code.
 		:returns:           Enumeration value.
 		:raises ValueError: If the year code is not recognized.
 		"""

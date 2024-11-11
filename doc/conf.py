@@ -182,7 +182,7 @@ extensions = [
 # ==============================================================================
 intersphinx_mapping = {
 	"python": ("https://docs.python.org/3", None),
-	"setup":  ("https://setuptools.pypa.io/en/latest", None),
+	"pyTool": ("https://pyTooling.github.io/pyTooling/", None),
 }
 
 
@@ -255,7 +255,7 @@ todo_link_only = True
 report_unittest_testsuites = {
 	"src": {
 		"name":        f"{project}",
-		"xml_report":  "../report/unit/unittest.xml",
+		"xml_report":  "../report/unit/TestReportSummary.xml",
 	}
 }
 report_codecov_packages = {
