@@ -78,7 +78,7 @@ News
 Contributors
 ************
 
-* `Patrick Lehmann <https://GitHub.com/Paebbels>`__ (Maintainer)
+* :gh:`Patrick Lehmann <Paebbels>` (Maintainer)
 * `and more... <https://GitHub.com/edaa-org/pySystemRDLModel/graphs/contributors>`__
 
 
@@ -129,7 +129,7 @@ License
    :caption: References and Reports
    :hidden:
 
-   pySystemRDLModel/pySystemRDLModel
+   Python Class Reference <pySystemRDLModel/pySystemRDLModel>
    unittests/index
    coverage/index
    Doc. Coverage Report <DocCoverage>
