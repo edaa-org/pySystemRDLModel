@@ -64,11 +64,11 @@
    :target: https://GitHub.com/edaa-org/pySystemRDLModel/network/dependents
 
 .. # GHA test and coverage
-.. |SHIELD:svg:pySystemRDLModel-gha-test| image:: https://img.shields.io/github/workflow/status/edaa-org/pySystemRDLModel/Pipeline/main?longCache=true&style=flat-square&label=Build%20and%20Test&logo=GitHub%20Actions&logoColor=FFFFFF
+.. |SHIELD:svg:pySystemRDLModel-gha-test| image:: https://img.shields.io/github/actions/workflow/status/edaa-org/pySystemRDLModel/Pipeline.yml?longCache=true&style=flat-square&label=Build%20and%20Test&logo=GitHub%20Actions&logoColor=FFFFFF
    :alt: GitHub Workflow - Build and Test Status
    :height: 22
    :target: https://GitHub.com/edaa-org/pySystemRDLModel/actions/workflows/Pipeline.yml
-.. |SHIELD:png:pySystemRDLModel-gha-test| image:: https://raster.shields.io/github/workflow/status/edaa-org/pySystemRDLModel/Pipeline/main?longCache=true&style=flat-square&label=Build%20and%20Test&logo=GitHub%20Actions&logoColor=FFFFFF
+.. |SHIELD:png:pySystemRDLModel-gha-test| image:: https://raster.shields.io/github/actions/workflow/status/edaa-org/pySystemRDLModel/Pipeline.yml?longCache=true&style=flat-square&label=Build%20and%20Test&logo=GitHub%20Actions&logoColor=FFFFFF
    :alt: GitHub Workflow - Build and Test Status
    :height: 22
    :target: https://GitHub.com/edaa-org/pySystemRDLModel/actions/workflows/Pipeline.yml
