@@ -35,7 +35,7 @@ The pySystemRDLModel Documentation
 An abstract SystemRDL language model.
 
 
-.. _goals:
+.. _GOALS:
 
 Main Goals
 **********
@@ -48,7 +48,7 @@ Projects consuming pre-processed SystemRDL data (parsed, analyzed or elaborated)
 and services on such a model, while supporting multiple frontends.
 
 
-.. _usecase:
+.. _USECASES:
 
 Use Cases
 *********
@@ -56,7 +56,7 @@ Use Cases
 * TBD
 
 
-.. _news:
+.. _NEWS:
 
 News
 ****
