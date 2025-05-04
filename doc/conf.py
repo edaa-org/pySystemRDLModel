@@ -263,7 +263,7 @@ todo_link_only = True
 report_unittest_testsuites = {
 	"src": {
 		"name":        f"{project}",
-		"xml_report":  "../report/unit/TestReportSummary.xml",
+		"xml_report":  "../report/unit/unittest.xml",
 	}
 }
 report_codecov_packages = {
@@ -277,7 +277,7 @@ report_codecov_packages = {
 report_doccov_packages = {
 	"src": {
 		"name":       f"{project}",
-		"directory":  f"../{project}",
+		"directory":  f"../{directoryName}",
 		"fail_below": 80,
 		"levels":     "default"
 	}

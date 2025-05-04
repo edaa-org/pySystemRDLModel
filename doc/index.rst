@@ -132,6 +132,7 @@ License
    Python Class Reference <pySystemRDLModel/pySystemRDLModel>
    unittests/index
    coverage/index
+   CodeCoverage
    Doc. Coverage Report <DocCoverage>
    Static Type Check Report ➚ <typing/index>
 
