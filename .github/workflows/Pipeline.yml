@@ -11,10 +11,12 @@ jobs:
   Pipeline:
     uses: pyTooling/Actions/.github/workflows/CompletePipeline.yml@r6
     with:
-      package_name: pySystemRDLModel
-      codecov:       true
-      codacy:        true
-      dorny:         true
+      package_name:  'pySystemRDLModel'
+      bandit:        'true'
+      pylint:        'false'
+      codecov:       'true'
+      codacy:        'true'
+      dorny:         'true'
     secrets:
       PYPI_TOKEN:    ${{ secrets.PYPI_TOKEN }}
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
