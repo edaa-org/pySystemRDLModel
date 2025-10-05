@@ -39,19 +39,22 @@ packageName =            "pySystemRDLModel"
 packageDirectory =       packageName
 packageInformationFile = Path(f"{packageDirectory}/__init__.py")
 
-setup(**DescribePythonPackageHostedOnGitHub(
-	packageName=packageName,
-	description="An abstract SystemRDL language model.",
-	gitHubNamespace=gitHubNamespace,
-	keywords="Python3 SystemRDL Language Model Abstract",
-	sourceFileWithVersion=packageInformationFile,
-	developmentStatus="alpha",
-	classifiers=list(DEFAULT_CLASSIFIERS) + [
-		"Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
-		"Topic :: Software Development :: Code Generators",
-		"Topic :: Software Development :: Compilers"
-	],
-	dataFiles={
-		packageName: ["py.typed"]
-	}
-))
+setup(
+	**DescribePythonPackageHostedOnGitHub(
+		packageName=packageName,
+		description="An abstract SystemRDL language model.",
+		gitHubNamespace=gitHubNamespace,
+		keywords="Python3 SystemRDL Language Model Abstract",
+		sourceFileWithVersion=packageInformationFile,
+		developmentStatus="alpha",
+		classifiers=list(DEFAULT_CLASSIFIERS) + [
+			"Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+			"Topic :: Software Development :: Code Generators",
+			"Topic :: Software Development :: Compilers"
+		],
+		dataFiles={
+			packageName: ["py.typed"]
+		},
+		debug=True
+	)
+)
