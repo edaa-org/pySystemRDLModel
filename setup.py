@@ -54,7 +54,6 @@ setup(
 		],
 		dataFiles={
 			packageName: ["py.typed"]
-		},
-		debug=True
+		}
 	)
 )
