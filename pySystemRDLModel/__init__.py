@@ -11,7 +11,7 @@
 #                                                                                                                      #
 # License:                                                                                                             #
 # ==================================================================================================================== #
-# Copyright 2023-2025 Patrick Lehmann - Boetzingen, Germany                                                            #
+# Copyright 2023-2026 Patrick Lehmann - Boetzingen, Germany                                                            #
 #                                                                                                                      #
 # Licensed under the Apache License, Version 2.0 (the "License");                                                      #
 # you may not use this file except in compliance with the License.                                                     #
@@ -39,7 +39,7 @@ supporting multiple frontends.
 
 .. admonition:: Copyright Information
 
-   :copyright: Copyright 2023-2025 Patrick Lehmann - Bötzingen, Germany
+   :copyright: Copyright 2023-2026 Patrick Lehmann - Bötzingen, Germany
    :license: Apache License, Version 2.0
 """
 from enum   import unique, Enum
@@ -50,9 +50,9 @@ from pyTooling.Decorators import export
 
 __author__ =    "Patrick Lehmann"
 __email__ =     "Paebbels@gmail.com"
-__copyright__ = "2023-2025, Patrick Lehmann"
+__copyright__ = "2023-2026, Patrick Lehmann"
 __license__ =   "Apache License, Version 2.0"
-__version__ =   "0.3.6"
+__version__ =   "0.3.7"
 
 
 @export
@@ -98,7 +98,7 @@ class SystemRDLVersion(Enum):
 		"Latest": SystemRDL2017,
 	}  #: Dictionary of SystemRDL year codes variants as integer and strings for mapping to unique enum values.
 
-	def __init__(self, *_):
+	def __init__(self, *_) -> None:
 		"""Patch the embedded MAP dictionary"""
 		cls = self.__class__
 		for k, v in cls.__VERSION_MAPPINGS__.items():
@@ -204,7 +204,7 @@ class SystemRDLVersion(Enum):
 		"""
 		Formats the SystemRDLVersion version to pattern ``SystemRDL'xx``.
 
-		:return: Formatted SystemRDL version.
+		:returns: Formatted SystemRDL version.
 		"""
 		if self.value == self.Any.value:
 			return "SystemRDL'Any"
@@ -218,7 +218,7 @@ class SystemRDLVersion(Enum):
 		"""
 		Formats the SystemRDL version to pattern ``xxxx``.
 
-		:return: Formatted SystemRDL version.
+		:returns: Formatted SystemRDL version.
 		"""
 		if self.value == self.Any.value:
 			return "Any"
