@@ -98,7 +98,7 @@ class SystemRDLVersion(Enum):
 		"Latest": SystemRDL2017,
 	}  #: Dictionary of SystemRDL year codes variants as integer and strings for mapping to unique enum values.
 
-	def __init__(self, *_):
+	def __init__(self, *_) -> None:
 		"""Patch the embedded MAP dictionary"""
 		cls = self.__class__
 		for k, v in cls.__VERSION_MAPPINGS__.items():
@@ -204,7 +204,7 @@ class SystemRDLVersion(Enum):
 		"""
 		Formats the SystemRDLVersion version to pattern ``SystemRDL'xx``.
 
-		:return: Formatted SystemRDL version.
+		:returns: Formatted SystemRDL version.
 		"""
 		if self.value == self.Any.value:
 			return "SystemRDL'Any"
@@ -218,7 +218,7 @@ class SystemRDLVersion(Enum):
 		"""
 		Formats the SystemRDL version to pattern ``xxxx``.
 
-		:return: Formatted SystemRDL version.
+		:returns: Formatted SystemRDL version.
 		"""
 		if self.value == self.Any.value:
 			return "Any"
