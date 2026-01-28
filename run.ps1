@@ -33,7 +33,7 @@ Param(
 )
 
 $PackageName = "pySystemRDLModel"
-$PackageVersion = "0.3.6"
+$PackageVersion = "0.3.8"
 
 # set default values
 $EnableDebug =        [bool]$PSCmdlet.MyInvocation.BoundParameters["Debug"]
