@@ -48,11 +48,15 @@ from typing import Dict, Union
 from pyTooling.Decorators import export
 
 
-__author__ =    "Patrick Lehmann"
-__email__ =     "Paebbels@gmail.com"
-__copyright__ = "2023-2026, Patrick Lehmann"
-__license__ =   "Apache License, Version 2.0"
-__version__ =   "0.3.9"
+__author__ =            "Patrick Lehmann"
+__email__ =             "Paebbels@gmail.com"
+__copyright__ =         "2023-2026, Patrick Lehmann"
+__license__ =           "Apache License, Version 2.0"
+__version__ =           "0.3.9"
+# __keywords__ =          []
+__project_url__ =       "https://github.com/edaa-org/pySystemRDLModel"
+__documentation_url__ = "https://edaa-org.github.io/pySystemRDLModel"
+__issue_tracker_url__ = "https://GitHub.com/edaa-org/pySystemRDLModel/issues"
 
 
 @export
