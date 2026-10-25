@@ -29,9 +29,9 @@
 # ==================================================================================================================== #
 #
 """Instantiation tests for the language model."""
-from unittest import TestCase
+from pyTooling.Testing import Testcase
 
-from pySystemRDLModel import SystemRDLVersion
+from pySystemRDLModel  import SystemRDLVersion
 
 
 if __name__ == "__main__": # pragma: no cover
@@ -40,7 +40,7 @@ if __name__ == "__main__": # pragma: no cover
 	exit(1)
 
 
-class SysRDLVersion(TestCase):
+class SysRDLVersion(Testcase):
 	def test_Any(self) -> None:
 		versions = (
 			SystemRDLVersion.Parse(-1),
