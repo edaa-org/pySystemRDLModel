@@ -11,7 +11,7 @@
 #                                                                                                                      #
 # License:                                                                                                             #
 # ==================================================================================================================== #
-# Copyright 2023-2026 Patrick Lehmann - Boetzingen, Germany                                                            #
+# Copyright 2023-2026 Electronic Design Automation Abstraction (EDA²)                                                  #
 #                                                                                                                      #
 # Licensed under the Apache License, Version 2.0 (the "License");                                                      #
 # you may not use this file except in compliance with the License.                                                     #
@@ -29,9 +29,9 @@
 # ==================================================================================================================== #
 #
 """Instantiation tests for the language model."""
-from unittest import TestCase
+from pyTooling.Testing import Testcase
 
-from pySystemRDLModel import SystemRDLVersion
+from pySystemRDLModel  import SystemRDLVersion
 
 
 if __name__ == "__main__": # pragma: no cover
@@ -40,7 +40,7 @@ if __name__ == "__main__": # pragma: no cover
 	exit(1)
 
 
-class SysRDLVersion(TestCase):
+class SysRDLVersion(Testcase):
 	def test_Any(self) -> None:
 		versions = (
 			SystemRDLVersion.Parse(-1),
