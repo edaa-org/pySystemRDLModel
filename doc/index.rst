@@ -56,23 +56,6 @@ Use Cases
 * TBD
 
 
-.. _NEWS:
-
-News
-****
-
-.. only:: html
-
-   June 2023 - New Repository Created
-   ==================================
-
-.. only:: latex
-
-   .. rubric:: New Repository Created
-
-* Moved ``SystemRDLVersion`` class from ``pyEDAA.ProjectModel`` to this new repository.
-
-
 .. _CONTRIBUTORS:
 
 Contributors
@@ -100,6 +83,7 @@ The accompanying documentation is licensed under :ref:`Creative Commons - Attrib
    :caption: Introduction
    :hidden:
 
+   News
    Installation
    Dependency
 
